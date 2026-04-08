@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --color-brand-dark: #141E30;
+  --color-brand-primary: #3F5E96;
+  --color-brand-secondary: #b3c1d1;
+  --font-inter: "Inter", sans-serif;
+  --max-width-site: 1200px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-brand-dark);
+  color: white;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Infinite Marquee Animation (Global for all marquees) */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
