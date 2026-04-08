@@ -1,34 +1,29 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
-import Hero from './components/ui/Hero';
-import SolutionsSection from './components/ui/SolutionsSection';
-import ProjectsSection from './components/ui/ProjectsSection';
-import ProcessSection from './components/ui/ProcessSection';
-import CtaSection from './components/ui/CtaSection';
-
-import GridBackground from './components/common/GridBackground';
+import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
+import OurApps from './pages/OurApps';
+import ShopifyPlus from './pages/services/ShopifyPlus';
+import AppDevelopment from './pages/services/AppDevelopment';
+import WebDevelopment from './pages/services/WebDevelopment';
+import ThreeDExperiences from './pages/services/ThreeDExperiences';
 
 function App() {
   return (
-    <Layout>
-      <GridBackground />
-      <main className="overflow-hidden">
-        {/* Prime Hero Section (Fixed dark viewport) */}
-        <Hero />
-
-        {/* One platform for every way you sell (Overlapping section) */}
-        <SolutionsSection />
-
-        {/* Process Section: How We Work */}
-        <ProcessSection />
-
-        {/* Explore Our Company projects (Case Studies) */}
-        <ProjectsSection />
-
-        {/* High-fidelity CTA: Powering enterprise businesses */}
-        <CtaSection />
-      </main>
-    </Layout>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/apps" element={<OurApps />} />
+          <Route path="/services/shopify-plus" element={<ShopifyPlus />} />
+          <Route path="/services/app-development" element={<AppDevelopment />} />
+          <Route path="/services/web-development" element={<WebDevelopment />} />
+          <Route path="/services/3d-experiences" element={<ThreeDExperiences />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 

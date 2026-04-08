@@ -94,7 +94,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="relative py-24 sm:py-32 !pb-0 bg-transparent overflow-hidden">
+    <section className="relative py-24 sm:py-32 !pb-10 bg-transparent overflow-hidden">
       {/* Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-brand-primary/5 blur-[120px] rounded-full -z-10" />
       <div className="absolute -bottom-20 -right-20 w-[600px] h-[600px] bg-brand-primary/10 blur-[100px] rounded-full -z-10" />
