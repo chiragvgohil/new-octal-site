@@ -3,6 +3,7 @@ import Layout from './components/layout/Layout';
 import Hero from './components/ui/Hero';
 import SolutionsSection from './components/ui/SolutionsSection';
 import ProjectsSection from './components/ui/ProjectsSection';
+import ProcessSection from './components/ui/ProcessSection';
 import CtaSection from './components/ui/CtaSection';
 
 import GridBackground from './components/common/GridBackground';
@@ -17,6 +18,9 @@ function App() {
 
         {/* One platform for every way you sell (Overlapping section) */}
         <SolutionsSection />
+
+        {/* Process Section: How We Work */}
+        <ProcessSection />
 
         {/* Explore Our Company projects (Case Studies) */}
         <ProjectsSection />

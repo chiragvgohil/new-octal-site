@@ -19,13 +19,13 @@ const ProjectCard = ({ image, title, category, description }) => (
   <div className="group relative bg-white/5 backdrop-blur-md rounded-[2.5rem] overflow-hidden border border-white/10 transition-all duration-700 hover:border-brand-primary/50 hover:bg-white/8 flex flex-col h-full">
     {/* Image Container with Overlay */}
     <div className="relative aspect-16/10 overflow-hidden">
-      <img 
-        src={image} 
-        alt={title} 
-        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
       />
       <div className="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700" />
-      
+
       {/* Category Tag */}
       <div className="absolute top-6 left-6">
         <span className="px-4 py-1.5 rounded-full bg-brand-primary/20 backdrop-blur-xl border border-brand-primary/30 text-brand-primary text-[10px] font-bold tracking-[0.2em] uppercase">
@@ -94,7 +94,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="relative py-24 sm:py-32 bg-transparent overflow-hidden">
+    <section className="relative py-24 sm:py-32 !pb-0 bg-transparent overflow-hidden">
       {/* Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-brand-primary/5 blur-[120px] rounded-full -z-10" />
       <div className="absolute -bottom-20 -right-20 w-[600px] h-[600px] bg-brand-primary/10 blur-[100px] rounded-full -z-10" />
@@ -139,7 +139,7 @@ const ProjectsSection = () => {
               prevEl: '.project-prev',
               nextEl: '.project-next',
             }}
-            pagination={{ 
+            pagination={{
               clickable: true,
               el: '.project-pagination',
               bulletClass: 'swiper-pagination-bullet !bg-white/20 !opacity-100',
@@ -162,12 +162,12 @@ const ProjectsSection = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          
+
           {/* Custom Pagination Container */}
           <div className="project-pagination flex justify-center mt-12 gap-3" />
         </div>
       </div>
-      
+
       <style>{`
         .swiper-pagination-bullet {
           width: 8px;
